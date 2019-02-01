@@ -2,7 +2,8 @@
 Using username "mda".
 Server refused our key
 mda@192.168.25.134's password: 
-Last login: Fri Feb  1 10:16:27 2019 from 192.168.25.83
+Last login: Fri Feb  1 10:16:27 2019 from 192.168.25.83
+
 [mda@attacker ~]$ sudo su -
 [sudo] password for mda: 
 Last login: Fri Feb  1 10:19:33 -03 2019 on pts/0
@@ -108,7 +109,8 @@ Not shown: 999 filtered ports
 PORT   STATE SERVICE
 80/tcp open  http
 
---More--(35%)Nmap scan report for 172.18.0.10
+--More--(35%)
+Nmap scan report for 172.18.0.10
 Host is up (0.0011s latency).
 Not shown: 999 filtered ports
 PORT   STATE SERVICE
@@ -152,7 +154,8 @@ PORT   STATE SERVICE
 
 Nmap scan report for 172.18.0.17
 Host is up (0.0015s latency).
---More--(71%)Not shown: 999 filtered ports
+--More--(71%)
+Not shown: 999 filtered ports
 PORT   STATE SERVICE
 80/tcp open  http
 
@@ -257,7 +260,8 @@ Not shown: 999 filtered ports
 PORT   STATE SERVICE
 80/tcp open  http
 
---More--(35%)Nmap scan report for 172.18.0.10
+--More--(35%)
+Nmap scan report for 172.18.0.10
 Host is up (0.0011s latency).
 Not shown: 999 filtered ports
 PORT   STATE SERVICE
@@ -301,7 +305,8 @@ PORT   STATE SERVICE
 
 Nmap scan report for 172.18.0.17
 Host is up (0.0015s latency).
---More--(71%)Not shown: 999 filtered ports
+--More--(71%)
+Not shown: 999 filtered ports
 PORT   STATE SERVICE
 80/tcp open  http
 
@@ -401,7 +406,8 @@ Nmap scan report for 172.18.0.19
 Nmap scan report for 172.18.0.20
 Nmap scan report for 172.18.0.21
 Nmap scan report for 172.18.0.22
-[root@attacker ~]# grep ^Nmap ps.log  | grep 172 | awk '{print $5}'
+[root@attacker ~]# grep ^Nmap ps.log  | grep 172 | 
+awk '{print $5}'
 172.18.0.2
 172.18.0.4
 172.18.0.5
@@ -424,7 +430,8 @@ Nmap scan report for 172.18.0.22
 172.18.0.22
 [root@attacker ~]# grep ^Nmap ps.log  | grep 172 | awk '{print $5}' | xargs -n1 curl
 ^C
-[root@attacker ~]# grep ^Nmap ps.log  | grep 172 | awk '{print $5}' | xargs -n1 curlfor FIP in $(); do
+[root@attacker ~]# grep ^Nmap ps.log  | grep 172 | awk '{print $5}' | xargs -n1 curl
+for FIP in $(); do
 > curl $IP &
 > done
 [1] 22581
