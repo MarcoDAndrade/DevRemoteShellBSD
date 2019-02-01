@@ -1,7 +1,8 @@
 =~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2019.02.01 13:32:04 =~=~=~=~=~=~=~=~=~=~=~=
 Using username "mda".
 Authenticating with public key "DESKTOP-6V5S4DA\mdacw@DESKTOP-6V5S4DA"
-Last login: Thu Jan 31 19:09:38 2019 from 192.168.25.83
+Last login: Thu Jan 31 19:09:38 2019 from 192.168.25.83
+
 ]0;mda@dockerlab:~[?1034h[mda@dockerlab ~]$ sudo su -
 [sudo] password for mda: 
 Last login: Thu Jan 31 15:50:14 -03 2019 on pts/0
@@ -282,28 +283,91 @@ services:
 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# docker-compose up -d
 Creating network "mysql_default" with the default driver
-Creating mysql_nginx_1  ... 
-Creating mysql_nginx_2  ... 
-Creating mysql_nginx_3  ... 
-Creating mysql_nginx_4  ... 
-Creating mysql_nginx_5  ... 
-Creating mysql_nginx_6  ... 
-Creating mysql_nginx_7  ... 
-Creating mysql_nginx_8  ... 
-Creating mysql_nginx_9  ... 
-Creating mysql_db_1     ... 
-Creating mysql_http_1   ... 
-Creating mysql_nginx_10 ... 
-Creating mysql_http_2   ... 
-Creating mysql_nginx_11 ... 
-Creating mysql_nginx_12 ... 
-Creating mysql_nginx_13 ... 
-Creating mysql_nginx_14 ... 
-Creating mysql_nginx_15 ... 
-Creating mysql_http_3   ... 
-Creating mysql_http_4   ... 
-Creating mysql_http_5   ... 
-[6A[2KCreating mysql_http_1   ... [32mdone[0m[6B[8A[2KCreating mysql_nginx_14 ... [32mdone[0m[8B[1A[2KCreating mysql_db_1     ... [32mdone[0m[1B[2A[2KCreating mysql_http_5   ... [32mdone[0m[2B[7A[2KCreating mysql_nginx_15 ... [32mdone[0m[7B[11A[2KCreating mysql_nginx_11 ... [32mdone[0m[11B[4A[2KCreating mysql_http_3   ... [32mdone[0m[4B[18A[2KCreating mysql_nginx_4  ... [32mdone[0m[18B[5A[2KCreating mysql_http_2   ... [32mdone[0m[5B[9A[2KCreating mysql_nginx_13 ... [32mdone[0m[9B[21A[2KCreating mysql_nginx_1  ... [32mdone[0m[21B[17A[2KCreating mysql_nginx_5  ... [32mdone[0m[17B[10A[2KCreating mysql_nginx_12 ... [32mdone[0m[10B[14A[2KCreating mysql_nginx_8  ... [32mdone[0m[14B[19A[2KCreating mysql_nginx_3  ... [32mdone[0m[19B[3A[2KCreating mysql_http_4   ... [32mdone[0m[3B[20A[2KCreating mysql_nginx_2  ... [32mdone[0m[20B[13A[2KCreating mysql_nginx_9  ... [32mdone[0m[13B[15A[2KCreating mysql_nginx_7  ... [32mdone[0m[15B[16A[2KCreating mysql_nginx_6  ... [32mdone[0m[16B[12A[2KCreating mysql_nginx_10 ... [32mdone[0m[12B]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
+Creating mysql_nginx_1  ... 
+
+Creating mysql_nginx_2  ... 
+
+Creating mysql_nginx_3  ... 
+
+Creating mysql_nginx_4  ... 
+
+Creating mysql_nginx_5  ... 
+
+Creating mysql_nginx_6  ... 
+
+Creating mysql_nginx_7  ... 
+
+Creating mysql_nginx_8  ... 
+
+Creating mysql_nginx_9  ... 
+
+Creating mysql_db_1     ... 
+
+Creating mysql_http_1   ... 
+
+Creating mysql_nginx_10 ... 
+
+Creating mysql_http_2   ... 
+
+Creating mysql_nginx_11 ... 
+
+Creating mysql_nginx_12 ... 
+
+Creating mysql_nginx_13 ... 
+
+Creating mysql_nginx_14 ... 
+
+Creating mysql_nginx_15 ... 
+
+Creating mysql_http_3   ... 
+
+Creating mysql_http_4   ... 
+
+Creating mysql_http_5   ... 
+
+[6A[2K
+Creating mysql_http_1   ... [32mdone[0m
+[6B[8A[2K
+Creating mysql_nginx_14 ... [32mdone[0m
+[8B[1A[2K
+Creating mysql_db_1     ... [32mdone[0m
+[1B[2A[2K
+Creating mysql_http_5   ... [32mdone[0m
+[2B[7A[2K
+Creating mysql_nginx_15 ... [32mdone[0m
+[7B[11A[2K
+Creating mysql_nginx_11 ... [32mdone[0m
+[11B[4A[2K
+Creating mysql_http_3   ... [32mdone[0m
+[4B[18A[2K
+Creating mysql_nginx_4  ... [32mdone[0m
+[18B[5A[2K
+Creating mysql_http_2   ... [32mdone[0m
+[5B[9A[2K
+Creating mysql_nginx_13 ... [32mdone[0m
+[9B[21A[2K
+Creating mysql_nginx_1  ... [32mdone[0m
+[21B[17A[2K
+Creating mysql_nginx_5  ... [32mdone[0m
+[17B[10A[2K
+Creating mysql_nginx_12 ... [32mdone[0m
+[10B[14A[2K
+Creating mysql_nginx_8  ... [32mdone[0m
+[14B[19A[2K
+Creating mysql_nginx_3  ... [32mdone[0m
+[19B[3A[2K
+Creating mysql_http_4   ... [32mdone[0m
+[3B[20A[2K
+Creating mysql_nginx_2  ... [32mdone[0m
+[20B[13A[2K
+Creating mysql_nginx_9  ... [32mdone[0m
+[13B[15A[2K
+Creating mysql_nginx_7  ... [32mdone[0m
+[15B[16A[2K
+Creating mysql_nginx_6  ... [32mdone[0m
+[16B[12A[2K
+Creating mysql_nginx_10 ... [32mdone[0m
+[12B]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
@@ -497,7 +561,8 @@ Thu Jan 31 19:11:57 -03 2019
 -- Coletas finais de estatisticas
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
-]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# echo -- Coletas finais de estatisticas[5PIniciando ataque e coleta[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdate[Kiptables -L -n -v -x
+]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# echo -- Coletas finais de estatisticas[5PIniciando ataque e coleta
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdate[Kiptables -L -n -v -x
 Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
     pkts      bytes target     prot opt in     out     source               destination         
    22476 50637653 ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
@@ -649,28 +714,91 @@ Chain OUTPUT_direct (1 references)
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# docker-compose kill
-Killing mysql_nginx_6  ... 
-Killing mysql_nginx_7  ... 
-Killing mysql_nginx_10 ... 
-Killing mysql_nginx_2  ... 
-Killing mysql_nginx_9  ... 
-Killing mysql_nginx_3  ... 
-Killing mysql_nginx_13 ... 
-Killing mysql_nginx_5  ... 
-Killing mysql_nginx_12 ... 
-Killing mysql_nginx_8  ... 
-Killing mysql_nginx_4  ... 
-Killing mysql_http_4   ... 
-Killing mysql_nginx_1  ... 
-Killing mysql_nginx_15 ... 
-Killing mysql_http_3   ... 
-Killing mysql_http_2   ... 
-Killing mysql_nginx_11 ... 
-Killing mysql_http_5   ... 
-Killing mysql_nginx_14 ... 
-Killing mysql_http_1   ... 
-Killing mysql_db_1     ... 
-[10A[2KKilling mysql_http_4   ... [32mdone[0m[10B[6A[2KKilling mysql_http_2   ... [32mdone[0m[6B[5A[2KKilling mysql_nginx_11 ... [32mdone[0m[5B[14A[2KKilling mysql_nginx_5  ... [32mdone[0m[14B[12A[2KKilling mysql_nginx_8  ... [32mdone[0m[12B[15A[2KKilling mysql_nginx_13 ... [32mdone[0m[15B[18A[2KKilling mysql_nginx_2  ... [32mdone[0m[18B[8A[2KKilling mysql_nginx_15 ... [32mdone[0m[8B[4A[2KKilling mysql_http_5   ... [32mdone[0m[4B[16A[2KKilling mysql_nginx_3  ... [32mdone[0m[16B[20A[2KKilling mysql_nginx_7  ... [32mdone[0m[20B[7A[2KKilling mysql_http_3   ... [32mdone[0m[7B[9A[2KKilling mysql_nginx_1  ... [32mdone[0m[9B[17A[2KKilling mysql_nginx_9  ... [32mdone[0m[17B[19A[2KKilling mysql_nginx_10 ... [32mdone[0m[19B[11A[2KKilling mysql_nginx_4  ... [32mdone[0m[11B[3A[2KKilling mysql_nginx_14 ... [32mdone[0m[3B[2A[2KKilling mysql_http_1   ... [32mdone[0m[2B[13A[2KKilling mysql_nginx_12 ... [32mdone[0m[13B[21A[2KKilling mysql_nginx_6  ... [32mdone[0m[21B[1A[2KKilling mysql_db_1     ... [32mdone[0m[1B]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
+Killing mysql_nginx_6  ... 
+
+Killing mysql_nginx_7  ... 
+
+Killing mysql_nginx_10 ... 
+
+Killing mysql_nginx_2  ... 
+
+Killing mysql_nginx_9  ... 
+
+Killing mysql_nginx_3  ... 
+
+Killing mysql_nginx_13 ... 
+
+Killing mysql_nginx_5  ... 
+
+Killing mysql_nginx_12 ... 
+
+Killing mysql_nginx_8  ... 
+
+Killing mysql_nginx_4  ... 
+
+Killing mysql_http_4   ... 
+
+Killing mysql_nginx_1  ... 
+
+Killing mysql_nginx_15 ... 
+
+Killing mysql_http_3   ... 
+
+Killing mysql_http_2   ... 
+
+Killing mysql_nginx_11 ... 
+
+Killing mysql_http_5   ... 
+
+Killing mysql_nginx_14 ... 
+
+Killing mysql_http_1   ... 
+
+Killing mysql_db_1     ... 
+
+[10A[2K
+Killing mysql_http_4   ... [32mdone[0m
+[10B[6A[2K
+Killing mysql_http_2   ... [32mdone[0m
+[6B[5A[2K
+Killing mysql_nginx_11 ... [32mdone[0m
+[5B[14A[2K
+Killing mysql_nginx_5  ... [32mdone[0m
+[14B[12A[2K
+Killing mysql_nginx_8  ... [32mdone[0m
+[12B[15A[2K
+Killing mysql_nginx_13 ... [32mdone[0m
+[15B[18A[2K
+Killing mysql_nginx_2  ... [32mdone[0m
+[18B[8A[2K
+Killing mysql_nginx_15 ... [32mdone[0m
+[8B[4A[2K
+Killing mysql_http_5   ... [32mdone[0m
+[4B[16A[2K
+Killing mysql_nginx_3  ... [32mdone[0m
+[16B[20A[2K
+Killing mysql_nginx_7  ... [32mdone[0m
+[20B[7A[2K
+Killing mysql_http_3   ... [32mdone[0m
+[7B[9A[2K
+Killing mysql_nginx_1  ... [32mdone[0m
+[9B[17A[2K
+Killing mysql_nginx_9  ... [32mdone[0m
+[17B[19A[2K
+Killing mysql_nginx_10 ... [32mdone[0m
+[19B[11A[2K
+Killing mysql_nginx_4  ... [32mdone[0m
+[11B[3A[2K
+Killing mysql_nginx_14 ... [32mdone[0m
+[3B[2A[2K
+Killing mysql_http_1   ... [32mdone[0m
+[2B[13A[2K
+Killing mysql_nginx_12 ... [32mdone[0m
+[13B[21A[2K
+Killing mysql_nginx_6  ... [32mdone[0m
+[21B[1A[2K
+Killing mysql_db_1     ... [32mdone[0m
+[1B]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# 
 ]0;root@dockerlab:/home/mda/MySQL[root@dockerlab MySQL]# exit
