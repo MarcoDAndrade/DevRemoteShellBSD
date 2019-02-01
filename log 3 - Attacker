@@ -1,0 +1,1358 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2019.02.01 13:37:40 =~=~=~=~=~=~=~=~=~=~=~=
+Using username "mda".
+Server refused our key
+mda@192.168.25.134's password: 
+Last login: Fri Feb  1 10:16:27 2019 from 192.168.25.83
+[mda@attacker ~]$ sudo su -
+[sudo] password for mda: 
+Last login: Fri Feb  1 10:19:33 -03 2019 on pts/0
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:8a:98:98 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.25.134/24 brd 192.168.25.255 scope global noprefixroute dynamic enp0s3
+       valid_lft 76879sec preferred_lft 76879sec
+    inet6 2001:1284:f01c:e429:a00:27ff:fe8a:9898/64 scope global mngtmpaddr dynamic 
+       valid_lft 86080sec preferred_lft 86080sec
+    inet6 fe80::a00:27ff:fe8a:9898/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# date
+Fri Feb  1 12:37:52 -03 2019
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# nmap -PN 172.18.0.0/26 -n | tee pn.log
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2019-02-01 12:38 -03
+
+[root@attacker ~]# nmap -PN 172.18.0.0/26 -n | tee pn.log> &
+[1] 22516
+[root@attacker ~]# Failed to resolve "pn.log".
+
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# nmap -PN 172.18.0.0/26 -n > tee pn.log &-n 
+[2] 22517
+[root@attacker ~]# Failed to resolve "pn.log".
+
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# nmap -n -PN 172.18.0.0/26 > tee pn.log &
+[3] 22518
+[root@attacker ~]# nmap -n -PN 172.18.0.0/26 > pn.log &sS
+[4] 22519
+[root@attacker ~]# wait %3
+[1]   Done                    nmap -PN 172.18.0.0/26 -n pn.log > tee
+[2]   Done                    nmap -n -PN 172.18.0.0/26 pn.log > tee
+[3]-  Done                    nmap -n -PN 172.18.0.0/26 > pn.log
+[4]+  Done                    nmap -n -PS 172.18.0.0/26 > ps.log
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# ls
+anaconda-ks.cfg  pn  pn.log  ps  ps.log  tee
+[root@attacker ~]# mor eps.log
+-bash: mor: command not found
+[root@attacker ~]# more ps.log
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2019-02-01 12:44 -03
+Nmap scan report for 172.18.0.2
+Host is up (0.0011s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.4
+Host is up (0.0012s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.5
+Host is up (0.0013s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.6
+Host is up (0.0013s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.7
+Host is up (0.0012s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.8
+Host is up (0.0014s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.9
+Host is up (0.0014s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+--More--(35%)Nmap scan report for 172.18.0.10
+Host is up (0.0011s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.11
+Host is up (0.0014s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.12
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.13
+Host is up (0.00076s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.14
+Host is up (0.0010s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.15
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.16
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.17
+Host is up (0.0015s latency).
+--More--(71%)Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.18
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.19
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.20
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.21
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.22
+Host is up (0.0016s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap done: 64 IP addresses (20 hosts up) scanned in 23.08 seconds
+[root@attacker ~]#   
+[root@attacker ~]# 
+[root@attacker ~]# grep ps.log
+^C
+[root@attacker ~]# grep ps.logops.logps.logeps.lognps.log ps.log
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+80/tcp open  http
+[root@attacker ~]# grep open ps.log more ps.log
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2019-02-01 12:44 -03
+Nmap scan report for 172.18.0.2
+Host is up (0.0011s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.4
+Host is up (0.0012s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.5
+Host is up (0.0013s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.6
+Host is up (0.0013s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.7
+Host is up (0.0012s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.8
+Host is up (0.0014s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.9
+Host is up (0.0014s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+--More--(35%)Nmap scan report for 172.18.0.10
+Host is up (0.0011s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.11
+Host is up (0.0014s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.12
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.13
+Host is up (0.00076s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.14
+Host is up (0.0010s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.15
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.16
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.17
+Host is up (0.0015s latency).
+--More--(71%)Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.18
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.19
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.20
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.21
+Host is up (0.0015s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap scan report for 172.18.0.22
+Host is up (0.0016s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap done: 64 IP addresses (20 hosts up) scanned in 23.08 seconds
+[root@attacker ~]# echo 20 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# eho 20echo 20 portas http abertas
+20 portas http abertas
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# gre p^Nmap ts.lo
+anaconda-ks.cfg  .bash_logout     .bashrc          .lesshst         pn.log           ps.log           tee
+.bash_history    .bash_profile    .cshrc           pn               ps               .tcshrc          .viminfo
+[root@attacker ~]# gre p^Nmap grep ^Nmap ts.ps.log 
+Nmap scan report for 172.18.0.2
+Nmap scan report for 172.18.0.4
+Nmap scan report for 172.18.0.5
+Nmap scan report for 172.18.0.6
+Nmap scan report for 172.18.0.7
+Nmap scan report for 172.18.0.8
+Nmap scan report for 172.18.0.9
+Nmap scan report for 172.18.0.10
+Nmap scan report for 172.18.0.11
+Nmap scan report for 172.18.0.12
+Nmap scan report for 172.18.0.13
+Nmap scan report for 172.18.0.14
+Nmap scan report for 172.18.0.15
+Nmap scan report for 172.18.0.16
+Nmap scan report for 172.18.0.17
+Nmap scan report for 172.18.0.18
+Nmap scan report for 172.18.0.19
+Nmap scan report for 172.18.0.20
+Nmap scan report for 172.18.0.21
+Nmap scan report for 172.18.0.22
+Nmap done: 64 IP addresses (20 hosts up) scanned in 23.08 seconds
+[root@attacker ~]# grep ^Nmap ps.log  | grep 172
+Nmap scan report for 172.18.0.2
+Nmap scan report for 172.18.0.4
+Nmap scan report for 172.18.0.5
+Nmap scan report for 172.18.0.6
+Nmap scan report for 172.18.0.7
+Nmap scan report for 172.18.0.8
+Nmap scan report for 172.18.0.9
+Nmap scan report for 172.18.0.10
+Nmap scan report for 172.18.0.11
+Nmap scan report for 172.18.0.12
+Nmap scan report for 172.18.0.13
+Nmap scan report for 172.18.0.14
+Nmap scan report for 172.18.0.15
+Nmap scan report for 172.18.0.16
+Nmap scan report for 172.18.0.17
+Nmap scan report for 172.18.0.18
+Nmap scan report for 172.18.0.19
+Nmap scan report for 172.18.0.20
+Nmap scan report for 172.18.0.21
+Nmap scan report for 172.18.0.22
+[root@attacker ~]# grep ^Nmap ps.log  | grep 172 | awk '{print $5}'
+172.18.0.2
+172.18.0.4
+172.18.0.5
+172.18.0.6
+172.18.0.7
+172.18.0.8
+172.18.0.9
+172.18.0.10
+172.18.0.11
+172.18.0.12
+172.18.0.13
+172.18.0.14
+172.18.0.15
+172.18.0.16
+172.18.0.17
+172.18.0.18
+172.18.0.19
+172.18.0.20
+172.18.0.21
+172.18.0.22
+[root@attacker ~]# grep ^Nmap ps.log  | grep 172 | awk '{print $5}' | xargs -n1 curl
+^C
+[root@attacker ~]# grep ^Nmap ps.log  | grep 172 | awk '{print $5}' | xargs -n1 curlfor FIP in $(); do
+> curl $IP &
+> done
+[1] 22581
+[2] 22582
+[3] 22583
+[4] 22584
+[5] 22585
+[6] 22586
+[7] 22587
+[8] 22588
+[9] 22589
+[10] 22590
+[11] 22591
+[12] 22592
+[13] 22593
+[14] 22594
+[15] 22595
+[16] 22596
+[17] 22597
+[18] 22598
+[19] 22599
+[20] 22600
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# for IP in $(grep ^Nmap ps.log  | grep 172 | awk '{print $5}' ); do curl $IP & done done; done
+<html><body><h1>It works!</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<html><body><h1>It works!</h1></body></html>
+<html><body><h1>It works!</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<html><body><h1>It works!</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<html><body><h1>It works!</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# for IP in $(grep ^Nmap ps.log  | grep 172 | awk '{print $5}' ); do curl $IP ; done
+<html><body><h1>It works!</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<html><body><h1>It works!</h1></body></html>
+<html><body><h1>It works!</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<html><body><h1>It works!</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<html><body><h1>It works!</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+[root@attacker ~]# for IP in $(grep ^Nmap ps.log  | grep 172 | awk '{print $5}' ); do curl $IP ; done&
+[21] 22653
+[22] 22654
+[23] 22655
+[24] 22656
+[25] 22657
+[26] 22658
+[27] 22659
+[28] 22660
+[29] 22661
+[30] 22662
+[31] 22663
+[32] 22664
+[33] 22665
+[34] 22666
+[35] 22667
+[36] 22668
+[37] 22669
+[38] 22670
+[39] 22671
+[40] 22672
+[root@attacker ~]# curl: (7)cc uuFrralli::l  e((d77 ))c  oFFnaaniiellceetdd   tccooo nn1en7cn2te. c1tt8o . t01o.7 1210.7:1288.0.1;08 ..C20o0.n:1n82e0:c;8t 0iC;oo nnC notenicnmteeicdot nio timed outou
+nt 
+timed out
+curl: (7) Failed ccuornln:e c(t7 )ct uoFr al1i:7l 2e(.d71 )8c .oF0na.ni2el:ce8td0  ;tc ooC no1nn7en2ce.tc1 t8ti.oo0 n.1 57t:2i8.m01e;8d . C0oo.un1tn1
+e:c8t0i;o nC otninmeecdt ioount 
+timed out
+curl: (7)c uFcrualri:ll :e( d7( )7c )oF naFniaeliceltde  dtc ooc no1nn7en2ce.tc1 t8t .ot0 o.1 471:278.201.;81 .8C0.o.0n6.n:1e86c0:t;8i 0oC;no  nCtnoienmcnetedic otoniu ottn
+i mteidm eodu to
+ut
+curl: (7) Failed connect to 172.18.0.19:80; Connection timed out
+curl: (7)c uFrali:l e(d7 )c oFnanielcetd  tcoo n1n7e2c.t1 8t.o0 .12722:.8108;. 0C.o7n:n8e0c;t iCoonn nteicmteido no utti
+med out
+curl: (7) Failed connect to 172.18.0.17:80; Connection timed out
+curlc:u r(l7:)  (F7a)i lFeadi lceodn nceocntn etcot  1t7o2 .11782..01.89.:08.01;5 :C8o0n;n eCcotninoenc ttiiomne dt iomuetd
+ out
+curl: (7) Failed connect to 172.18.0.21:80; Connection timed out
+curl: (7) Failedc ucroln:n e(c7t)  tFoa i1l7e2d. 1c8o.n0n.e1c4t: 8t0o;  1C7o2n.n1e8c.t0i.o8n: 8t0i;m eCdo nonuetc
+tion timed out
+curl: (7) Failed connect to 172.18.0.13:80; Connection timed out
+curl: (7) Failed connect to 172.18.0.18:80; Connection timed out
+cccuuurrrlll:::   (((777)))   FFFaaaiiillleeeddd   cccooonnnnnneeecccttt   tttooo   111777222...111888...000...826:::888000;;;   CCCooonnnnnneeeccctttiiiooonnn timed out t 
+itmiemde do uotu
+t
+curl: (7) Failed connect to 172.18.0.11:80c; Cucornulnr:el c:(t 7i)( 7oF)na  iFtlaeiled connde ccto ntnoe c1t72.18.0. 5:8t0o;  1C7o2n.n1e8c.t0i.o1n8 :t8i0m;e dC oonunte
+ction timed out
+curl: (7) Failed connect to 172.18.0.21:80; Connection timed out
+curl: (7) Failed connect to 172.18.0.19:80; Connection ctuirmle:d  (o7u)t 
+Failecd ucroln:n e(c7t)  tFoa i1l7e2d. 1c8o.n0n.e2c0t: 8t0o;  1C7o2n.n1e8c.t0i.o4n: 8t0i;m eCdo nonuetc
+tion timed out
+curl: (7) Failed connect to 172.18.0.22:80; Connection timed out
+ccuurrll::  ((77))  FFaaiilleedd  ccoonnnneecctt  ttoo  117722..1188..00..1174::8800;;  CCoonnnneeccttiioonn  ttiimmeedd  oouutt
+
+curl: (7) Failed connect to 172.18.0.16:80; Connection timed out
+imed out
+curl: (7) Failed connect to 172.18.0.10:80; Connection timed out
+curl: (7) Failed connect to 172.18.0.13:80; Connection ctuirmle:d  (o7u)t 
+Failed connect to 172.18.0.12:80; Connection timed out
+curl: (7) Failed connect to 172.18.0.9:80; Connection timed out
+curl: (7) Failed connect to 172.18.0.15:80; Connection timed out
+curl: (7) Failed connect to 172.18.0.7:80; Connection timed out
+
+[1]   Exit 7                  curl $IP
+[2]   Exit 7                  curl $IP
+[3]   Exit 7                  curl $IP
+[4]   Exit 7                  curl $IP
+[5]   Exit 7                  curl $IP
+[6]   Exit 7                  curl $IP
+[7]   Exit 7                  curl $IP
+[8]   Exit 7                  curl $IP
+[9]   Exit 7                  curl $IP
+[10]   Exit 7                  curl $IP
+[11]   Exit 7                  curl $IP
+[12]   Exit 7                  curl $IP
+[13]   Exit 7                  curl $IP
+[14]   Exit 7                  curl $IP
+[15]   Exit 7                  curl $IP
+[16]   Exit 7                  curl $IP
+[17]   Exit 7                  curl $IP
+[18]   Exit 7                  curl $IP
+[19]   Exit 7                  curl $IP
+[20]   Exit 7                  curl $IP
+[21]   Exit 7                  curl $IP
+[22]   Exit 7                  curl $IP
+[23]   Exit 7                  curl $IP
+[24]   Exit 7                  curl $IP
+[25]   Exit 7                  curl $IP
+[26]   Exit 7                  curl $IP
+[27]   Exit 7                  curl $IP
+[28]   Exit 7                  curl $IP
+[29]   Exit 7                  curl $IP
+[30]   Exit 7                  curl $IP
+[31]   Exit 7                  curl $IP
+[32]   Exit 7                  curl $IP
+[33]   Exit 7                  curl $IP
+[34]   Exit 7                  curl $IP
+[35]   Exit 7                  curl $IP
+[36]   Exit 7                  curl $IP
+[37]   Exit 7                  curl $IP
+[38]   Exit 7                  curl $IP
+[39]-  Exit 7                  curl $IP
+[40]+  Exit 7                  curl $IP
+[root@attacker ~]# 
+[root@attacker ~]# 
+[root@attacker ~]# logout
+[mda@attacker ~]$ logout
